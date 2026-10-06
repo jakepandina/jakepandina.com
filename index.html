@@ -1,11 +1,91 @@
-<!DOCTYPE html>
-<html>
+<!doctype html>
+<html lang="en">
+
 <head>
-  <title>Jake Pandina</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Jake Pandina - Actor, Singer, Programmer in Boston</title>
+  <meta name="description" content="Boston-based actor, singer, performer and software developer.">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;700;800&family=Newsreader:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-  <h1>Under Construction</h1>
+  <div class="wrap">
+
+    <!-- Navigation -->
+    <nav>
+      <a class="logo" href="index.html">Jake Pandina</a>
+      <ul>
+        <li><a href="index.html" aria-current="page">Home</a></li>
+        <li><a href="programming.html">Programming</a></li>
+        <li><a href="performance.html">Performance</a></li>
+      </ul>
+    </nav>
+
+    <!-- Hero (the spotlight follows your cursor here) -->
+    <header class="hero" id="hero">
+      <h1>
+        Jake Pandina
+        <span>on stage, in code.</span>
+      </h1>
+      <p class="lede">
+        I'm a Boston-based actor, singer and programmer. I like building things
+        people can feel, whether that's a song, a scene or a web app.
+      </p>
+    </header>
+
+    <!-- Links to the other pages -->
+    <section class="doors">
+      <a class="door" href="performance.html">
+        <h3>Performance</h3>
+        <p>Stage credits, vocal range, reel and training.</p>
+      </a>
+      <a class="door" href="programming.html">
+        <h3>Programming &amp; experience</h3>
+        <p>Projects, skills and where I've worked.</p>
+      </a>
+    </section>
+
+    <!-- About -->
+    <h2>About</h2>
+    <p>
+      Write two or three warm, specific sentences here: where you trained, what
+      you love performing, and what kind of software you like building. Mention
+      Boston: the theaters you work in, the neighborhood you call home.
+    </p>
+    <p class="muted">
+      Tip: casting directors and hiring managers both skim, so lead with the
+      thing you most want to be hired for.
+    </p>
+
+    <!-- Footer -->
+    <footer>
+      <span>© 2026 Your Name · Boston, MA</span>
+      <span>
+        <a href="jakempand@gmail.com">jakempand@gmail.com</a> ·
+        <a href="#">Instagram</a>
+        <a href="#">GitHub</a>
+      </span>
+    </footer>
+
+  </div>
+
+  <!-- Moves the spotlight with the mouse -->
+  <script>
+    const hero = document.getElementById('hero');
+
+    hero.addEventListener('pointermove', (e) => {
+      const box = hero.getBoundingClientRect();
+      hero.style.setProperty('--x', (e.clientX - box.left) + 'px');
+      hero.style.setProperty('--y', (e.clientY - box.top) + 'px');
+    });
+  </script>
 </body>
 
 </html>
